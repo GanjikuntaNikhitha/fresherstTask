@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
+ <script>
+var myApp = angular.module("myApp", []);
+ myApp.controller("myController", function($scope) {
+$scope.myArray = ['a','b','c','d','e'];
+$scope.deleteElement = function(item) {
+	 var index = $scope.myArray.indexOf(item);
+	 if(index > -1){
+     $scope.myArray.splice(index, 1); // will remove item 
+     }	 
+};
+});
+</script>
+</head>
+<body>  
+<div ng-app="myApp">  
+<div ng-controller="myController">  
+<p>Remove b from array = {{myArray}}</p>
+<input type="button" value="Remove b " ng-click="deleteElement('b')"> 
+</div> 
+
+</body>  
+</html>  

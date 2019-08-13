@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    <script src  = "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+   <script src = "pagination.js"></script>
+<style>
+   table, tr , td {
+
+    border: 1px solid grey; 
+    /* this is used for border */
+    
+    border-collapse: collapse;
+    
+    padding: 5px;
+    
+    }
+    </style>
+</head>
+    <body>
+
+<div ng-app = "myApp" ng-controller = "myCtrl">
+    <h2>AngularJS Tables with CSS Styles</h2>
+
+    <table>
+    <thead  style="background: green; color:white;">
+   
+    <td ng-click="sort('name')"> Name</td>
+    
+    <td>Marks</td>
+    
+    
+    
+    </tr>
+</thead>
+    <tr ng-repeat="user in users |  orderBy : 'name'">
+    
+    <td>{{user.name}}</td>
+    
+    <td>{{user.marks}}</td>
+    
+    
+    
+    </tr>
+    
+    </table>
+    </div>
+    </body>
+</html>

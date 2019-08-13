@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+</head>
+
+<body>
+<div ng-app="" ng-init="myData=[{name:'John',city:'New York'},
+                                      {name:'Mike',city:'Florida'},
+                                      {name:'Minni',city:'London'},
+                                      {name:'Sefali',city:'Sydney'},
+                                      {name:'Maya',city:'Peris'},
+                                      {name:'Kelly',city:'Beijing'}]">
+
+    <p>Search <input type="text" ng-model="searchstr"></p>
+    <table id="searchResults">
+    <tr><th>Name</th><th>City</th></tr>
+    <tr ng-repeat="data in myData | filter:searchstr">
+    <td>{{data.name | uppercase}}</td>
+    <td>{{data.city | lowercase}}</td>
+    </tr>
+    </table>
+
+</div>
+
+</body>
+</html>

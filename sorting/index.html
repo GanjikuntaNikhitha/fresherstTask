@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example - example-orderBy-dynamic-production</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  
+
+  <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+  <script src="script.js"></script>
+  
+
+  
+</head>
+<body ng-app="orderByExample2">
+  <div ng-controller="ExampleController">
+  <!-- <pre>Sort by = {{propertyName}}; reverse = {{reverse}}</pre> -->
+  <p>Sort by = {{propertyName}}; reverse = {{reverse}}</p>
+  <table class="friends">
+    <tr>
+      <th>
+        <button ng-click="sortBy('name')">Name</button>
+     
+      </th>
+      <th>
+        <button ng-click="sortBy('phone')">Phone Number</button>
+ 
+      </th>
+      <th>
+        <button ng-click="sortBy('age')">Age</button>
+       
+      </th>
+    </tr>
+    <tr ng-repeat="friend in friends | orderBy:propertyName:reverse">
+      <td>{{friend.name}}</td>
+      <td>{{friend.phone}}</td>
+      <td>{{friend.age}}</td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

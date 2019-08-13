@@ -1,0 +1,140 @@
+<html>
+
+<head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <style>
+ .container1{
+   padding: 80pt 0 0pt 0pt;
+ 
+   position: relative ;
+     width: 414pt;
+     height: 368pt;
+     background-color:blue;
+     margin-left: 244.96pt 72pt 0 93.89pt;
+ }
+
+
+ h1 {
+
+    size: 100px;
+        text-align: center;
+        color: white;
+        width: 120%;
+
+
+ }
+    h2 {
+        text-align: left;
+        size: 25pt;
+        font-weight: bold;
+        width: 342%;
+        height: 90;
+        margin-left: 38pt;
+        
+    }
+    h3 {
+        text-align: left;
+        size: 23pt;
+        font-weight: bold;
+        width: 315%;
+        height: 44;
+        margin-left: 38pt;
+        
+    }
+    p {
+        text-align: left;
+        font-weight: bold;
+        width: 200%;
+        height: 23pt;
+        size: 13pt;
+        margin-left: 38pt;
+    }
+   button{
+ text-align: center;
+ height:68;
+ margin: 0 41pt 0 41pt;
+width: 450px;
+ border-radius: 25px;
+  border: 2px solid blue;
+   }
+   H5 {
+       text-align: center;
+       margin-left: 70pt;
+       
+       color: white;
+       height: 10.11pt;
+       width: 211.24pt;
+       opacity: 100%;;
+   }
+
+
+
+   #navigation 
+{ 
+   position: absolute; 
+   left: 30px; 
+   bottom: 50px 
+} 
+
+    </style>
+
+</head>
+<body>
+<div class = main style="height: 736pt;width: 414pt">
+
+<div class = container1>
+    <div id ="navigation">
+<h1>StuCred</h1>
+<h5>REAL-TIME STUDENT CREDIT</h5>
+
+</div>
+</div><br></br>
+<div class = container2>
+<h2>
+    Get started with <br> Stucred
+</h2><br>
+<p>Mobile number</p>
+
+<h3>Enter Mobile Number</h3>
+<button type ="submit">CONTINUE</button>
+</div>
+</div>
+</body>
+</html>
+
+
+
+
+  $http({
+        method: 'POST',
+        url: '/nameOfPerson',
+        headers: {
+            'Content-Type': 'application/json'
+          },
+        data: {
+            "email":"vineetha@stucred.com"
+        }
+      }).then(function successCallback(response) {
+        console.log(response)
+        }, function errorCallback(error) {
+          console.log(error)
+          $scope.message = error.data;
+    
+        })
+
+        $http({
+            method: 'POST',
+            url: '/nameOfPerson',
+            headers: {
+                'Content-Type': 'application/json'
+              },
+            data: {
+                "mobile":"8639378314"
+            }
+          }).then(function successCallback(response) {
+            console.log(response)
+            }, function errorCallback(error) {
+              console.log(error)
+              $scope.message = error.data;
+        
+            })

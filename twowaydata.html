@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <title>
+
+        AngularJs Two Binding Example
+
+    </title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+    <script type="text/javascript">
+
+        var app = angular.module('angulartwobindapp', []);
+
+        app.controller('angulartwobindingCtrl', function ($scope) {
+
+            $scope.name = 'Welcome to Tutlane.com';
+
+        });
+
+    </script>                                                                                                 
+
+</head>
+
+<body ng-app="angulartwobindapp">
+
+    <div ng-controller="angulartwobindingCtrl">
+
+        Enter Name : <input type="text" ng-model="name" style="width:250px" />
+
+        <p>
+
+            Entered Name: {{ name }}
+
+        </p>
+
+    </div>
+
+</body>
+
+</html>
+
+<!-- output is the form of http://127.0.0.1:5500/twowaydata.html -->

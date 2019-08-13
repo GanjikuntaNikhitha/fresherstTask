@@ -1,0 +1,39 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<title>
+
+AngularJs Adding Directives to Modules Example
+
+</title>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<script type="text/javascript">
+
+var app = angular.module('angularmoduleapp', []);
+
+app.directive('w3TestDirective', function () {
+
+return {
+
+template: 'Welcome to Tutlane.com'
+
+};
+
+});
+
+</script>
+
+</head>
+
+<body>
+
+<div ng-app="angularmoduleapp" w3-test-directive></div>
+
+</body>
+
+</html>
+
+<!-- output is in the form of file:///E:/fresherstask/directives.html -->
